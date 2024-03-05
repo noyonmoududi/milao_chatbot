@@ -3,18 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const linkElement = document.createElement("link");
   linkElement.rel = "stylesheet";
   linkElement.href = "https://noyonmoududi.github.io/milao_chatbot/style.css";
+  //linkElement.href = "style.css";
   // Append the link element to the head of the document
   document.head.appendChild(linkElement);
   // Create a new div element
   const chatbotContainer = document.createElement("div");
   // Set the attributes for the div
-  chatbotContainer.className = "wrapper";
+  chatbotContainer.className = "milaoChatbotWrapper";
   chatbotContainer.id = "chatbotContainer";
   // Append the div to the body of the document
   document.body.appendChild(chatbotContainer);
 
   const chatIcon = document.getElementById("chatbotBtn");
-  const wrapper = document.querySelector(".wrapper");
+  const wrapper = document.querySelector(".milaoChatbotWrapper");
 
   chatIcon.addEventListener("click", function () {
     if (chatIcon.classList.contains("active")) {

@@ -54,50 +54,8 @@ chat-icon i.fas {
   opacity: 0;
   pointer-events: none;
 }
-label {
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
-  height: 55px;
-  width: 55px;
-  background: #4070f4;
-  text-align: center;
-  line-height: 55px;
-  border-radius: 50px;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-label i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
-}
-
-label i.fas {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#click:checked ~ label i.fas {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-#click:checked ~ label i.fa-solid {
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.wrapper {
+.milaoChatbotWrapper {
   position: absolute;
   right: 30px;
   bottom: 0px;
@@ -110,13 +68,13 @@ label i.fas {
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-#click:checked ~ .wrapper {
+#click:checked ~ .milaoChatbotWrapper {
   opacity: 1;
   bottom: 85px;
   pointer-events: auto;
 }
 
-.wrapper .head-text {
+.milaoChatbotWrapper .head-text {
   line-height: 60px;
   color: #fff;
   border-radius: 8px 8px 0 0;
@@ -126,7 +84,7 @@ label i.fas {
   background: #4070f4;
 }
 
-.wrapper .chat-box {
+.milaoChatbotWrapper .chat-box {
   padding: 20px;
   width: 100%;
 }
