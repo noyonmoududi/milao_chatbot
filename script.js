@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create a link element
   const linkElement = document.createElement("link");
   linkElement.rel = "stylesheet";
-  linkElement.href = "style.css";
+  linkElement.href = "https://noyonmoududi.github.io/milao_chatbot/style.css";
   // Append the link element to the head of the document
   document.head.appendChild(linkElement);
   // Create a new div element
