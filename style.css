@@ -52,7 +52,7 @@ chat-icon i.fas {
 }
 
 .milaoChatbotWrapper {
-  position: absolute;
+  position: fixed;
   right: 30px;
   bottom: 0px;
   max-width: 400px;
@@ -62,6 +62,7 @@ chat-icon i.fas {
   opacity: 0;
   pointer-events: none;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 9999;
 }
 
 #click:checked ~ .milaoChatbotWrapper {
