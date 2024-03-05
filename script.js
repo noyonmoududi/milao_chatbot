@@ -29,12 +29,32 @@ function initChatbot() {
   chatbotContainer.innerHTML = "";
   div.innerHTML = `
   <div class="head-text">Chat with us - Online</div>
-
-  <div class="chat-box">
-    <div class="desc-text">
-      Please provide us with these details so we may assist you better.
+  <div class="chat-box" id="chatbox">
+    <div id="chatList">
+      <div class="message receiver">
+        <p>Hello there.</p>
+      </div>
+      <div class="message receiver">
+        <p>I am a chatbot.</p>
+      </div>
+      <div class="message receiver">
+        <p>How Can I Help You?</p>
+      </div>
+      <div class="message sender">
+        <p>Details About Your services</p>
+      </div>
+      <form id="sendMessageForm">
+      <div class="field">
+        <input type="text" id="messageInput" placeholder="Type your message..." required />
+        <button type="submit">Send</button>
+      </div>
+    </form>
     </div>
-    <form action="#">
+
+    <form id="user_reg_form">
+      <div class="desc-text">
+        Please provide us with these details so we may assist you better.
+      </div>
       <div class="field">
         <input type="text" placeholder="Your Name" required />
       </div>
@@ -48,4 +68,21 @@ function initChatbot() {
   </div>
     `;
   chatbotContainer.appendChild(div);
+
+  // Add event listener for form submission
+  const userRegForm = document.getElementById("user_reg_form");
+  const chatList = document.getElementById("chatList");
+  userRegForm.addEventListener("submit", function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Reset the form
+    userRegForm.reset();
+    userRegForm.style.display = "none";
+    chatList.style.display = "block";
+    scrollChatToBottom(chatList);
+  });
+}
+
+function scrollChatToBottom(chatList) {
+  chatList.scrollTop = chatList.scrollHeight;
 }
